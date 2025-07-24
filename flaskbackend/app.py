@@ -33,7 +33,7 @@ CORS(app)  # Enable CORS for all routes
 # Configuration
 DEFAULT_CONFIG = {
     'modelApiUrl': 'https://api.groq.com/openai/v1/chat/completions',
-    'apiKey': 'Bearer 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',
+    'apiKey': '',
     'maxRetries': 3,
     'timeout': 30,
     'model': 'llama3-8b-8192',
