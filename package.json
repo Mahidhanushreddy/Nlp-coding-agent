@@ -1,0 +1,86 @@
+{
+	"name": "my-nlp-agent",
+	"displayName": "NLP Coding Agent",
+	"version": "1.0.0",
+	"description": "AI-powered coding assistant that executes commands and helps with development tasks",
+	"publisher": "your-publisher",
+	"engines": {
+		"vscode": "^1.74.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:nlp-agent.executeCommand",
+		"onCommand:nlp-agent.interactiveMode"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "nlp-agent.executeCommand",
+				"title": "NLP Agent: Execute Command",
+				"category": "NLP Agent"
+			},
+			{
+				"command": "nlp-agent.interactiveMode",
+				"title": "NLP Agent: Interactive Mode",
+				"category": "NLP Agent"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "nlp-agent.executeCommand",
+				"key": "ctrl+shift+n",
+				"mac": "cmd+shift+n"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "nlp-agent.executeCommand",
+					"when": "true"
+				},
+				{
+					"command": "nlp-agent.interactiveMode",
+					"when": "true"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "nlp-agent.executeCommand",
+					"when": "true",
+					"group": "1_modification"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"package": "vsce package"
+	},
+	"dependencies": {
+		"axios": "^1.10.0",
+		"chalk": "^4.1.2"
+	},
+	"devDependencies": {
+		"@types/node": "^20.0.0",
+		"@types/vscode": "^1.74.0",
+		"@vscode/vsce": "^2.15.0",
+		"typescript": "^5.0.0",
+		"vscode": "^1.1.37"
+	},
+	"keywords": [
+		"nlp",
+		"agent",
+		"coding",
+		"ai",
+		"assistant"
+	],
+	"author": "Your Name",
+	"license": "MIT",
+	"__metadata": {
+		"size": 84115203
+	}
+}
